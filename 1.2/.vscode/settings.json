@@ -1,0 +1,55 @@
+{
+  // https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header
+  "psi-header": {
+    "changes-tracking": {
+        "isActive": true,
+        "modAuthor": "Modified By: ",
+        "modDate": "Last Modified: ",
+        "modDateFormat": "date",
+        "include": [],
+        "exclude": [
+            "markdown",
+            "json"
+        ],
+        "excludeGlob": [
+            "out/**",
+            "src/**/*.xyz"
+        ],
+        "autoHeader": "manualSave"
+    },
+    "lang-config": [
+        {
+            "language": "*",
+            "begin": "/**",
+            "end": "*/",
+            "prefix": " * "
+        },
+        {
+            "language": "vue",
+            "begin": "<!--",
+            "end": "-->",
+            "prefix": "  "
+        }
+    ],
+    "config": {
+        "forceToTop": true,
+        "blankLinesAfter": 1,
+    },
+    "templates": [
+        {
+            "language": "*",
+            "template": [
+                "@FilePath: <<filerelativepath>>",
+                "@Date: <<filecreated('YYYY-MM-DD HH:mm:ss')>>",
+                "@Author: <<author>>",
+                "@Description:",
+                "-----",
+                "Last Modified: <<dateformat('YYYY-MM-DD HH:mm:ss')>>",
+                "Modified By: <<author>>",
+                "-----",
+                "Copyright (c) <<year>> by PLANTAE Taiwan, All Rights Reserved.",
+            ],
+        },
+    ]
+  },
+}
